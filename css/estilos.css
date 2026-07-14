@@ -73,3 +73,114 @@ body {
   color: #16213E;
 }
 
+/* Catálogo (index.html) */
+.catalogo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1.25rem;
+}
+
+.producto-card {
+    background-color: #FFFFFF;
+    border: 1px solid #E2E6EA;
+    border-radius: 10px;
+    padding: 1.25rem;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(22, 33, 62, 0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.producto-imagen {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.producto-categoria {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #667085;
+}
+
+.producto-nombre {
+    margin: 0.4rem 0;
+    font-size: 1.05rem;
+}
+
+.producto-precio {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #1F4287;
+    margin: 0.2rem 0;
+}
+
+.producto-stock {
+    font-size: 0.85rem;
+    color: #21A179;
+    margin-bottom: 0.75rem;
+}
+
+.producto-stock-agotado {
+    color: #D64550;
+    font-weight: 600;
+}
+
+/* Botones */
+.btn {
+    border: none;
+    border-radius: 6px;
+    padding: 0.6rem 1.1rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease, opacity 0.2s ease;
+}
+
+.btn-primario {
+    background-color: #278EA5;
+    color: #FFFFFF;
+    width: 100%;
+}
+
+.btn-primario:hover {
+    background-color: #1E6E80;
+}
+
+.btn-primario:disabled {
+    background-color: #E2E6EA;
+    color: #667085;
+    cursor: not-allowed;
+}
+
+.btn-secundario {
+    background-color: #FFFFFF;
+    color: #D64550;
+    border: 1px solid #D64550;
+}
+
+.btn-secundario:hover {
+  background-color: #D64550;
+  color: #FFFFFF;
+}
+
+/* Mensaje flotante (feedback al agregar al carrito) */
+.mensaje-flotante {
+    position: fixed;
+    bottom: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%) translateY(20px);
+    background-color: #16213E;
+    color: #FFFFFF;
+    padding: 0.75rem 1.25rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.mensaje-flotante-visible {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
