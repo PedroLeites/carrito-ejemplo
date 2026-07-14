@@ -13,13 +13,21 @@ Muestra cómo mantener el contenido de un carrito de compras aunque el usuario r
 ## Estructura del proyecto
 
 carrito-ejemplo/
+
 ├── index.html          → Página del catálogo
+
 ├── carrito.html        → Página del carrito
+
 ├── css/
+
 │   └── estilos.css     → Estilos compartidos por ambas páginas
+
 └── js/
+
 ├── storage.js         → Funciones de persistencia (JSON + LocalStorage)
+
 ├── catalogo.js        → Datos de productos y lógica del catálogo
+
 └── carrito.js         → Lógica de visualización y edición del carrito
 
 ## Cómo probarlo
