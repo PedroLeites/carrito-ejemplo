@@ -36,14 +36,14 @@ function mostrarCarrito() {
       </div>
 
       <div class="item-cantidad">
-        <button class="btn-cantidad btn-restar" aria-label="Restar uno">−</button>
+        <button class="btn-cantidad btn-restar">−</button>
         <span class="item-cantidad-numero">${item.cantidad}</span>
-        <button class="btn-cantidad btn-sumar" aria-label="Sumar uno">+</button>
+        <button class="btn-cantidad btn-sumar">+</button>
       </div>
 
       <span class="item-subtotal">$${subtotal.toLocaleString("es-UY")}</span>
 
-      <button class="btn-eliminar" aria-label="Eliminar producto">✕</button>
+      <button class="btn-eliminar">✕</button>
     `;
 
     // Cada botón queda conectado al producto de ESTE item (por id)
