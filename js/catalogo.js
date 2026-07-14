@@ -64,6 +64,7 @@ function agregarAlCarrito(producto) {
   }
 
   guardarCarrito(carrito);
+  actualizarContadorCarrito();
   mostrarMensaje(`${producto.nombre} agregado al carrito`);
 }
 
@@ -82,4 +83,5 @@ function mostrarMensaje(texto) {
 // Todo arranca cuando el HTML terminó de cargar
 document.addEventListener("DOMContentLoaded", () => {
   mostrarProductos();
+  actualizarContadorCarrito();
 });
