@@ -33,9 +33,50 @@ function mostrarProductos() {
       </button>
     `;
 
+    // El botón de esta card llama a agregarAlCarrito() con ESTE producto
+    const boton = card.querySelector(".btn-agregar");
+    if (!sinStock) {
+      boton.addEventListener("click", () => agregarAlCarrito(producto));
+    }
+
     // 3) Agregarlo a la página
     contenedor.appendChild(card);
   });
+}
+
+// Agrega un producto al carrito (o le suma 1 a la cantidad si ya estaba)
+function agregarAlCarrito(producto) {
+  const carrito = cargarCarrito();
+
+  // Buscamos si el producto ya está en el carrito por su id
+  const existente = carrito.find(item => item.id === producto.id);
+
+  if (existente) {
+    existente.cantidad++;
+  } else {
+    // Guardamos solo los datos que el carrito necesita
+    carrito.push({
+      id: producto.id,
+      nombre: producto.nombre,
+      precio: producto.precio,
+      cantidad: 1
+    });
+  }
+
+  guardarCarrito(carrito);
+  mostrarMensaje(`${producto.nombre} agregado al carrito`);
+}
+
+// Muestra un mensaje flotante breve (feedback visual para el usuario)
+function mostrarMensaje(texto) {
+  const mensaje = document.getElementById("mensaje-flotante");
+  mensaje.textContent = texto;
+  mensaje.classList.add("mensaje-flotante-visible");
+
+  // Lo ocultamos automáticamente después de 1.5 segundos
+  setTimeout(() => {
+    mensaje.classList.remove("mensaje-flotante-visible");
+  }, 1500);
 }
 
 // Todo arranca cuando el HTML terminó de cargar
