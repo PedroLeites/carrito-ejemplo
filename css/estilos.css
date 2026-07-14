@@ -1,4 +1,11 @@
-/* Básicos */
+/* =========================================================
+   estilos.css
+   Estilos compartidos entre index.html y carrito.html
+   ========================================================= */
+
+/* ---------------------------------------------------------
+   Básicos
+   --------------------------------------------------------- */
 * {
     margin: 0;
     padding: 0;
@@ -11,7 +18,9 @@ body {
     color: #1C2431;
 }
 
-/* Header y navegación */
+/* ---------------------------------------------------------
+   Header y navegación
+   --------------------------------------------------------- */
 .header {
     background-color: #16213E;
     color: #FFFFFF;
@@ -60,7 +69,9 @@ body {
     margin-left: 4px;
 }
 
-/* Contenido general */
+/* ---------------------------------------------------------
+   Contenido general
+   --------------------------------------------------------- */
 .contenido {
     max-width: 1000px;
     margin: 0 auto;
@@ -73,7 +84,9 @@ body {
   color: #16213E;
 }
 
-/* Catálogo (index.html) */
+/* ---------------------------------------------------------
+   Catálogo (index.html)
+   --------------------------------------------------------- */
 .catalogo-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
@@ -127,7 +140,9 @@ body {
     font-weight: 600;
 }
 
-/* Botones */
+/* ---------------------------------------------------------
+   Botones
+   --------------------------------------------------------- */
 .btn {
     border: none;
     border-radius: 6px;
@@ -163,7 +178,9 @@ body {
   color: #FFFFFF;
 }
 
-/* Mensaje flotante (feedback al agregar al carrito) */
+/* ---------------------------------------------------------
+   Mensaje flotante (feedback al agregar al carrito)
+   --------------------------------------------------------- */
 .mensaje-flotante {
     position: fixed;
     bottom: 1.5rem;
@@ -184,7 +201,9 @@ body {
     transform: translateX(-50%) translateY(0);
 }
 
-/* Carrito */
+/* ---------------------------------------------------------
+   Carrito (carrito.html)
+   --------------------------------------------------------- */
 .carrito-vacio {
     text-align: center;
     color: #667085;
@@ -292,7 +311,9 @@ body {
     gap: 0.75rem;
 }
 
-/* Responsive básico */
+/* ---------------------------------------------------------
+   Responsive básico
+   --------------------------------------------------------- */
 @media (max-width: 600px) {
   .item-carrito {
     display: flex;

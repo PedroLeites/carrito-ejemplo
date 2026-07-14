@@ -1,3 +1,14 @@
+/*
+  storage.js
+  -------------------------------------------------------
+  Funciones compartidas entre index.html y carrito.html.
+  Son las únicas funciones de este ejemplo que tocan
+  directamente LocalStorage. El resto del código (catalogo.js
+  y carrito.js) siempre pasa por acá para leer o guardar el
+  carrito: así, si el día de mañana cambiamos la forma de
+  guardar los datos, solo hay que modificar este archivo.
+*/
+
 const CLAVE_CARRITO = "carrito";
 
 // Recupera el carrito guardado en LocalStorage.

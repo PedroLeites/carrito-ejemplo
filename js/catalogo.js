@@ -1,3 +1,16 @@
+/*
+  catalogo.js
+  -------------------------------------------------------
+  Datos del catálogo (arreglo de objetos) y lógica para:
+    1) Dibujar los productos en pantalla (createElement/appendChild)
+    2) Agregar un producto al carrito cuando se hace click en el botón
+
+  En el proyecto real, este arreglo "productos" es el que más
+  adelante va a venir del servidor (PHP + MySQL) usando fetch().
+  Por ahora lo escribimos a mano para poder trabajar solo con
+  JavaScript.
+*/
+
 const productos = [
   { id: 1, nombre: "Mouse inalámbrico",     precio: 1200, stock: 15, categoria: "Accesorios",  imagen: "🖱️" },
   { id: 2, nombre: "Teclado mecánico",      precio: 3500, stock: 8,  categoria: "Accesorios",  imagen: "⌨️" },

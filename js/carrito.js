@@ -1,3 +1,19 @@
+/*
+  carrito.js
+  -------------------------------------------------------
+  Lógica exclusiva de carrito.html:
+    1) Dibujar los productos que están en el carrito
+    2) Sumar / restar cantidad de cada producto
+    3) Eliminar un producto
+    4) Vaciar el carrito completo
+    5) "Finalizar compra" (simulado)
+
+  Todas estas acciones, después de modificar el arreglo del
+  carrito, llaman a guardarCarrito() (definida en storage.js)
+  para que el cambio quede persistido, y a mostrarCarrito()
+  para volver a dibujar la pantalla actualizada.
+*/
+
 // Dibuja el contenido actual del carrito en #carrito-container
 function mostrarCarrito() {
   const carrito = cargarCarrito();
