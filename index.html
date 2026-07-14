@@ -4,24 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TiendaTech - Catálogo</title>
+    <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
-    <header>
-        <h1>TiendaTech</h1>
-        <nav>
-            <a href="index.html">Catálogo</a>
-            <a href="carrito.html">Carrito<span>0</span></a>
+    <header class="header">
+        <h1 class="logo">TiendaTech</h1>
+        <nav class="nav">
+            <a href="index.html" class="nav-link nav-link-activo">Catálogo</a>
+            <a href="carrito.html" class="nav-link">
+                Carrito
+                <span id="contador-carrito" class="contador">0</span>
+            </a>
         </nav>
     </header>
    
-    <main>
-        <h2>Nuestros productos</h2>
+    <main class="contenido">
+        <h2 class="titulo-seccion">Nuestros productos</h2>
 
-        <div id="catalogo-container">
+        <div id="catalogo-container" class="catalogo-grid">
             <!-- Acá se van a insertar dinámicamente los productos con JavaScript -->
         </div>
 
-        <div id="mensaje-flotante">
+        <div id="mensaje-flotante" class="mensaje-flotante">
             <!-- Mensaje flotante de confirmación al agregar un producto -->
         </div>
 

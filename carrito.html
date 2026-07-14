@@ -6,29 +6,34 @@
     <title>TiendaTech - Carrito</title>
 </head>
 <body>
-    <header>
-        <h1>TiendaTech</h1>
-        <nav>
-            <a href="index.html">Catálogo</a>
-            <a href="carrito.html">Carrito<span>0</span></a>
+    <header class="header">
+        <h1 class="logo">TiendaTech</h1>
+        <nav class="nav">
+            <a href="index.html" class="nav-link">Catálogo</a>
+            <a href="carrito.html" class="nav-link nav-link-activo">
+                Carrito
+                <span id="contador-carrito" class="contador">0</span>
+            </a>
         </nav>
     </header>
 
-    <main>
-        <h2>Tu carrito</h2>
+    <main class="contenido">
+        <h2 class="titulo-seccion">Tu carrito</h2>
 
         <!-- Se muestra solo si el carrito está vacío -->
-        <p>Tu carrito está vacío. ¡Agregá productos desde el catálogo!</p>
+        <p id="carrito-vacio" class="carrito-vacio">
+            Tu carrito está vacío. ¡Agregá productos desde el catálogo!
+        </p>
 
-        <div id="carrito-container">
+        <div id="carrito-container" class="carrito-lista">
             <!-- Acá se insertan dinámicamente los productos del carrito -->
         </div>
 
-        <div>
-            <h3>Total: $0</h3>
-            <div>
-                <button id="btn-vaciar">Vaciar carrito</button>
-                <button id="btn-finalizar">Finalizar compra</button>
+        <div class="carrito-resumen">
+            <h3 id="total-carrito" class="total">Total: $0</h3>
+            <div class="carrito-acciones">
+                <button id="btn-vaciar" class="btn btn-secundario">Vaciar carrito</button>
+                <button id="btn-finalizar" class="btn btn-primario">Finalizar compra</button>
             </div>
         </div>
     </main>
