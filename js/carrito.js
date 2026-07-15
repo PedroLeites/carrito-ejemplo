@@ -89,6 +89,7 @@ function cambiarCantidad(id, delta) {
   }
 
   guardarCarrito(carrito);
+  actualizarContadorCarrito();
   mostrarCarrito();
 }
 
@@ -96,6 +97,7 @@ function cambiarCantidad(id, delta) {
 function eliminarDelCarrito(id) {
   const carrito = cargarCarrito().filter(p => p.id !== id);
   guardarCarrito(carrito);
+  actualizarContadorCarrito();
   mostrarCarrito();
 }
 
